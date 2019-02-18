@@ -4,22 +4,34 @@ html, body {
     height: 100%;
     box-sizing: border-box;
     font-family: '微軟正黑體';
+    background-color: #e6e6e6;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 .input-wrapper {
     position: relative;
-    left: calc(50% - 125px);
+    /* left: calc(50% - 125px);
     width: 250px;
-    padding-top: 25px;
+    padding-top: 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 input {
-    width: 100%;
+    width: 250px;
     padding: 6px 10px 6px 10px;
     border:2px #d9d9d9 solid;
     border-radius: 50px;
     font-size: 17px;
+    transition: .5s;
+}
+input:focus {
+    width: 300px;
+}
+.suggest {
+    width: 100%;
 }
 ul {
     width: 100%;
@@ -60,4 +72,8 @@ a {
 }
 a:hover {
     font-size: 20px;
+}
+img {
+    float: left;
+    margin-right: 7px;
 }
